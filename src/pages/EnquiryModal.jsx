@@ -64,7 +64,7 @@ const EnquiryModal = ({ isOpen, onClose}) => {
   return (
     <div>
         {isOpen && <div className="modal-backdrop" onClick={onClose}></div>}
-    <div className={`modal fade ${isOpen ? 'show' : ''}`} style={{ display: isOpen ? 'block' : 'none', 'position' : 'fixed', 'display' : 'block', 'top' : '30%' }} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden={!isOpen} >
+    <div className={`modal fade ${isOpen ? 'show' : ''}`} style={{ display: isOpen ? 'block' : 'none', 'position' : 'fixed', 'display' : 'flex', 'align-items' : 'center', 'justify-content' : 'center' }} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden={!isOpen} >
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
@@ -120,7 +120,8 @@ const EnquiryModal = ({ isOpen, onClose}) => {
         </div>
       </div>
     </div>
-    <style jsx>{`
+      {/* Here is where you add the CSS rules */}
+      <style jsx>{`
         .modal-backdrop {
           position: fixed;
           top: 0;
@@ -129,6 +130,11 @@ const EnquiryModal = ({ isOpen, onClose}) => {
           bottom: 0;
           background-color: rgba(0, 0, 0, 0.5);
           z-index: 1040; /* Make sure it's behind the modal but above other content */
+        }
+
+        /* Add the custom CSS rule for .fade:not(.show) */
+        .fade:not(.show) {
+          display: none !important;
         }
       `}</style>
     </div>

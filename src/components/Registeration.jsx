@@ -55,13 +55,13 @@ const Registeration = () => {
                                         <div className="form-group">
                                             <select className="custom-select border-0 px-4" style={{ height: 47 }}>
                                             <option value="" disabled selected>Select a course</option>
-                                                {
+                                                {/* {
                                                     courses && courses.map((course) => (
                                                         <option key={course.id} value={course.id}>
                                                             {course.name}
                                                         </option>
                                                     ))
-                                                }
+                                                } */}
                                             </select>
                                         </div>
                                         <div>
